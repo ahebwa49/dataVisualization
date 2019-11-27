@@ -1,7 +1,8 @@
 import React from "react";
 import "./App.css";
 import BarChart from "./visualization/BarChart";
-// import RadialChart from "./visualization/RadialChart";
+import RadialChart from "./visualization/RadialChart";
+import LineChart from "./visualization/LineChart";
 
 class App extends React.Component {
   constructor(props) {
@@ -26,8 +27,6 @@ class App extends React.Component {
         ny.forEach(day => (day.date = new Date(day.date)));
 
         this.setState({ temps: { sf, ny } });
-        // console.log(sf);
-        // console.log(ny)
       });
   }
 
@@ -62,7 +61,8 @@ class App extends React.Component {
           but just to show the possibility of using D3 and React*
         </p>
         <BarChart data={data} />
-        {/*<RadialChart /> */}
+        <RadialChart data={data} />
+        <LineChart />
         <p>
           (Weather data from{" "}
           <a href="wunderground.com" target="_new">
