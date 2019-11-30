@@ -24,7 +24,7 @@ class BarChart extends React.Component {
   static getDerivedStateFromProps(nextProps, prevstate) {
     const { data } = nextProps;
     if (!data) return {};
-    console.log(data);
+    // console.log(data);
 
     // 1. map date to x-position
     const xExtent = d3.extent(data, d => d.date);

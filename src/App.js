@@ -62,7 +62,7 @@ class App extends React.Component {
         </p>
         <BarChart data={data} />
         <RadialChart data={data} />
-        <LineChart />
+        <LineChart data={data} />
         <p>
           (Weather data from{" "}
           <a href="wunderground.com" target="_new">
